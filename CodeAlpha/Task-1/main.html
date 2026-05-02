@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-wrap">
+        <section class="hero">
+            <div>
+                <h1>Image Gallery</h1>
+                <p>Browse curated photos with smooth hover effects, category filtering, and a fullscreen lightbox viewer. Navigate the gallery with next/previous controls or tap the image to open the lightbox.</p>
+            </div>
+        </section>
+
+        <div class="filters" aria-label="Image filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="city">City</button>
+            <button class="filter-btn" data-filter="people">People</button>
+        </div>
+
+        <div class="gallery" id="gallery"></div>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox-card">
+            <button class="close-btn" id="lightboxClose" aria-label="Close lightbox">×</button>
+            <img id="lightboxImage" src="" alt="Expanded gallery image">
+            <div class="lightbox-meta">
+                <div>
+                    <h2 id="lightboxTitle">Image title</h2>
+                </div>
+                <div class="lightbox-controls">
+                    <button class="icon-btn" id="prevBtn" aria-label="Previous image">‹</button>
+                    <button class="icon-btn" id="nextBtn" aria-label="Next image">›</button>
+                </div>
+            </div>
+            <p class="lightbox-description" id="lightboxDesc"></p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
