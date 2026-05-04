@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="player-card">
+    <div class="player-header">
+      <h1>Music Player</h1>
+      <p>Play, pause, skip and control your playlist.</p>
+    </div>
+
+    <div class="track-info">
+      <div class="track-meta">
+        <span class="track-title" id="track-title">Loading...</span>
+        <span class="track-artist" id="track-artist">Artist</span>
+      </div>
+      <div class="track-duration">
+        <span id="current-time">0:00</span>
+        <span id="total-time">0:00</span>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <input type="range" id="progress" class="progress" min="0" max="100" value="0">
+    </div>
+
+    <div class="controls">
+      <button id="prev" class="control-btn">⏮</button>
+      <button id="play" class="control-btn">▶️</button>
+      <button id="next" class="control-btn">⏭</button>
+    </div>
+
+    <div class="extra-controls">
+      <label>
+        Volume
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.75">
+      </label>
+      <label class="autoplay-label">
+        Autoplay
+        <input id="autoplay" type="checkbox" checked>
+      </label>
+    </div>
+
+    <section class="playlist">
+      <h2>Playlist</h2>
+      <ul id="playlist"></ul>
+    </section>
+  </main>
+
+  <audio id="audio"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
